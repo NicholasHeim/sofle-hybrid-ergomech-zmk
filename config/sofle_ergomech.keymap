@@ -13,9 +13,9 @@
 #define BASE    0
 #define LOWER   1
 #define RAISE   2
-#define   3
-#define   4
-#define   5
+#define NUMBER  3
+#define FKEY    4
+#define NAV     5
 #define ADJUST  6
 
 / {
@@ -23,7 +23,7 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <1 2>;
+            if-layers = <LOWER FKEY>;
             then-layer = <ADJUST>;
         };
     };
