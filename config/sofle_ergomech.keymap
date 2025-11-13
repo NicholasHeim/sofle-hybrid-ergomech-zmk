@@ -16,8 +16,6 @@
 #define ADJUST  3
 
 / {
-    // Activate ADJUST layer by pressing raise and lower
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -30,11 +28,11 @@
     behaviors {
         gui_alt: gui_alt {
             compatible = "zmk,behavior-mod-morph";
-            label = "GUI | S(LALT)";
+            label = "LS(GUI) | LALT";
             bindings = <&kp LEFT_ALT>, <&kp LEFT_GUI>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
     };
