@@ -52,8 +52,8 @@ layers:
   - MUTE
   - LGUI
   - LALT
-  - {t: ENTER, h: lower}
-  - {t: ENTER, h: lower}
+  - {t: ENTER, h: nav}
+  - {t: ENTER, h: fkey}
   - SPACE
   - SPACE
   - raise
@@ -117,7 +117,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -247,7 +247,7 @@ layers:
   - RGB TOG
   - ''
   - ''
-  - {type: held}
+  - ''
   - ''
   - ''
   - ''
@@ -378,7 +378,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -442,7 +442,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
