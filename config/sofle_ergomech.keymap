@@ -13,7 +13,10 @@
 #define BASE    0
 #define LOWER   1
 #define RAISE   2
-#define ADJUST  3
+#define   3
+#define   4
+#define   5
+#define ADJUST  6
 
 / {
     conditional_layers {
@@ -21,7 +24,7 @@
 
         adjust_layer {
             if-layers = <1 2>;
-            then-layer = <6>;
+            then-layer = <ADJUST>;
         };
     };
 
