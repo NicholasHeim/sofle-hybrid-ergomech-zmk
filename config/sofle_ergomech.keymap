@@ -13,7 +13,7 @@
 #define BASE    0
 #define LOWER   1
 #define RAISE   2
-#define NUMBER  3
+#define NUMS    3
 #define FKEY    4
 #define NAV     5
 #define ADJUST  6
@@ -47,12 +47,12 @@
             label = "default";
 
             bindings = <
-&kp GRAVE   &kp N1             &kp N2    &kp N3       &kp N4       &kp N5     &kp N6     &kp N7     &kp N8        &kp N9    &kp N0    &kp BSPC
-&kp TAB     &kp Q              &kp W     &kp E        &kp R        &kp T      &kp Y      &kp U      &kp I         &kp O     &kp P     &kp BSLH
-&kp LSHFT   &kp A              &kp S     &kp D        &kp F        &kp G      &kp H      &kp J      &kp K         &kp L     &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z              &kp X     &kp C        &kp V        &kp B      &kp N      &kp M      &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&kp C_MUTE  &kp LA(LG(LCTRL))  &gui_alt  &lt 5 ENTER  &lt 4 ENTER  &kp SPACE  &kp SPACE  &mo 2      &kp RCTRL     &kp RALT  &kp RGUI
-                                                                              &kp ENTER  &kp RIGHT  &kp UP_ARROW  &kp LEFT  &kp DOWN
+&kp GRAVE   &kp N1          &kp N2    &kp N3         &kp N4          &kp N5     &kp N6     &kp N7     &kp N8        &kp N9    &kp N0    &kp BSPC
+&kp TAB     &kp Q           &kp W     &kp E          &kp R           &kp T      &kp Y      &kp U      &kp I         &kp O     &kp P     &kp BSLH
+&kp LSHFT   &kp A           &kp S     &kp D          &kp F           &kp G      &kp H      &kp J      &kp K         &kp L     &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z           &kp X     &kp C          &kp V           &kp B      &kp N      &kp M      &kp COMMA     &kp DOT   &kp FSLH  &kp EQUAL
+&kp C_MUTE  &lt NUMS LGUI   &gui_alt  &lt NAV LGUI   &lt FKEY ENTER  &kp SPACE  &kp SPACE  &mo 2      &kp MINUS     &kp RALT  &kp RGUI
+                                                     &kp ENTER  &kp RIGHT  &kp UP_ARROW  &kp LEFT  &kp DOWN
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -75,12 +75,12 @@
             label = "raise";
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans     &trans    &trans    &trans     &trans   &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans        &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
-&trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans     &trans    &trans    &trans     &trans   &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans     &trans    &trans    &trans     &trans
-                                                                                  &kp A      &kp B     &kp C     &kp D      &kp E
+&kp ESC &trans      &trans      &trans      &trans      &trans      &trans     &trans    &trans    &trans     &trans   &trans
+&trans  &kp INS     &kp PSCRN   &kp K_CMENU &trans      &trans      &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
+&trans  &kp LALT    &kp LCTRL   &kp LSHFT   &trans      &kp CLCK    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
+&trans  &kp K_UNDO  &kp K_CUT   &kp K_COPY  &kp K_PASTE &trans      &trans     &trans    &trans    &trans     &trans   &trans
+&trans  &trans      &trans      &trans      &trans      &trans      &trans     &trans    &trans    &trans     &trans
+                                                                    &kp A      &kp B     &kp C     &kp D      &kp E
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -89,7 +89,7 @@
             label = "number";
             
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &kp FSLH  &kp STAR  &kp MINUS  &kp BSPC
+&kp ESC &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &kp FSLH  &kp STAR  &kp MINUS  &kp BSPC
 &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp N7  &kp N8    &kp N9    &kp PLUS   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp N5    &kp N6    &kp PLUS   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2    &kp N3    &kp RET    &trans
@@ -103,7 +103,7 @@
             label = "fkey";
 
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F11  &kp F12  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans   &trans   &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
@@ -117,7 +117,7 @@
             label = "nav";
 
             bindings = <
-&trans  &trans    &trans    &trans     &trans      &kp BACKSPACE  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC  &trans    &trans    &trans     &trans      &kp BACKSPACE  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp HOME  &kp UP    &kp END    &kp INSERT  &kp BACKSPACE  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL     &trans         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans    &trans    &kp LEFT   &kp RIGHT   &trans         &trans  &trans  &trans  &trans  &trans  &trans
