@@ -42,9 +42,9 @@
         };
 
         // Bootloader hold time, 3 seconds
-        &bootloader {
-            hold-time-ms = <3000>;
-        };
+        //&bootloader {
+        //    hold-time-ms = <3000>;
+        //};
     };
 
     keymap {
