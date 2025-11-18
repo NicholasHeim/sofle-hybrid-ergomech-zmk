@@ -40,11 +40,11 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
-
-        // Bootloader hold time, 3 seconds
-        //&bootloader {
-        //    hold-time-ms = <3000>;
-        //};
+    };
+    
+    // Bootloader hold time, 3 seconds
+    &bootloader {
+        hold-time-ms = <3000>;
     };
 
     keymap {
