@@ -1,1 +1,5 @@
+# Initial items
 .idea
+
+# Custom items
+*.code-workspace
