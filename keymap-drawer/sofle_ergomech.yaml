@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: sofle_ergomech}
 layers:
-  default:
+  colemak:
   - '`'
   - '1'
   - '2'
@@ -16,26 +16,26 @@ layers:
   - TAB
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
   - \
   - LSHFT
   - A
+  - R
   - S
+  - T
   - D
-  - F
-  - G
   - H
-  - J
-  - K
-  - L
-  - ;
+  - N
+  - E
+  - I
+  - O
   - ''''
   - LCTRL
   - Z
@@ -43,7 +43,7 @@ layers:
   - C
   - V
   - B
-  - N
+  - K
   - M
   - ','
   - .
